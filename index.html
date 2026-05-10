@@ -20,10 +20,35 @@
 </head>
 <body data-page="home">
 
-  <div class="preloader" id="preloader">
-    <div class="preloader__bar">
+  <!-- ═══ Cinematic Preloader ═══ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+
+    <!-- Vertical scan line -->
+    <div class="preloader__scan"></div>
+
+    <!-- Brand word letterform reveal -->
+    <div class="preloader__brand">
+      <span class="preloader__letter" style="--i:0">H</span>
+      <span class="preloader__letter" style="--i:1">O</span>
+      <span class="preloader__letter" style="--i:2">K</span>
+      <span class="preloader__letter" style="--i:3">A</span>
+      <span class="preloader__letter" style="--i:4">G</span>
+      <span class="preloader__letter" style="--i:5">E</span>
+    </div>
+
+    <!-- Descriptor line -->
+    <p class="preloader__sub">Cozinha autoral japonesa</p>
+
+    <!-- Numeric counter -->
+    <div class="preloader__counter">
+      <span id="preloader-count">0</span>
+    </div>
+
+    <!-- Thin progress line at bottom -->
+    <div class="preloader__progress">
       <div class="preloader__fill" id="preloader-fill"></div>
     </div>
+
   </div>
 
   <header class="site-header" id="header">

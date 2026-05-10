@@ -2823,114 +2823,67 @@ textarea.contact-input {
     min-height: 22rem;
   }
 }
-.preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #0A0A0A;
-  pointer-events: all;
-  opacity: 1;
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.preloader.is-done {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.preloader__bar {
-  position: relative;
-  width: clamp(6rem, 18vw, 14rem);
-  height: 1px;
-  background: rgba(253, 251, 247, 0.08);
-  overflow: hidden;
-  border-radius: 1px;
-}
-
-.preloader__fill {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(253, 251, 247, 0.3), rgba(253, 251, 247, 0.8));
-  border-radius: 1px;
-  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 body {
-  opacity: 1;
-  background: #0A0A0A;
+  background: #050505;
 }
 
-body::before {
+/* Darkness Overlay during transitions */
+body::after {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 9998;
   pointer-events: none;
-  background: #050505;
+  background: #000000;
   opacity: 0;
-  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Expo-Out entering */
   will-change: opacity;
 }
 
-body > header,
-body > main,
-body > footer {
-  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 500ms cubic-bezier(0.22, 1, 0.36, 1), filter 500ms cubic-bezier(0.22, 1, 0.36, 1);
+html.is-animating.is-leaving body::after {
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.87, 0, 0.13, 1); /* Expo-In exiting */
+}
+
+html.is-animating body::after {
+  opacity: 1;
+  transition: none;
+}
+
+/* Swup Transition Container */
+.transition-fade {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), filter 1.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform, filter;
 }
 
-body.page-enter::before {
-  opacity: 1;
-}
-
-body.page-enter > header,
-body.page-enter > main,
-body.page-enter > footer {
+/* Entering State (from left to center) */
+html.is-animating .transition-fade {
   opacity: 0.001;
-  transform: translate3d(-3rem, 0, 0);
-  filter: blur(0);
+  transform: translateX(-10vw);
+  filter: blur(8px);
 }
 
-body.page-ready > header,
-body.page-ready > main,
-body.page-ready > footer {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  filter: blur(0);
-}
-
-body.page-exit::before {
-  opacity: 1;
-}
-
-body.page-exit > header,
-body.page-exit > main,
-body.page-exit > footer {
+/* Exiting State (from center to right) */
+html.is-animating.is-leaving .transition-fade {
   opacity: 0.001;
-  transform: translate3d(4rem, 0, 0);
-  filter: blur(1px);
-}
-
-body.is-transitioning {
-  pointer-events: none;
+  transform: translateX(10vw);
+  filter: blur(6px);
+  transition: opacity 0.8s cubic-bezier(0.87, 0, 0.13, 1), transform 0.8s cubic-bezier(0.87, 0, 0.13, 1), filter 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .preloader {
     display: none !important;
   }
-  body::before,
-  body > header,
-  body > main,
-  body > footer {
+  body::after {
+    display: none !important;
+  }
+  .transition-fade {
     transform: none !important;
     filter: none !important;
-    transition: opacity 160ms ease;
+    transition: opacity 160ms ease !important;
   }
 }/*# sourceMappingURL=main.css.map */

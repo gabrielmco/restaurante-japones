@@ -1,6 +1,6 @@
-// ==============================================
-// HŌRAI · Main Entry Point
-// ==============================================
+// ═══════════════════════════════════════════════
+// HOKAGE · Main Entry Point
+// ═══════════════════════════════════════════════
 
 import { initLenis } from './lenis.js';
 import {
@@ -13,77 +13,91 @@ import {
 import { initMarquee } from './marquee.js';
 import Swup from 'https://unpkg.com/swup@4?module';
 
-// ─── Swup Integration ─────────────────────────
+// ── Swup with animation timing ──────────────────
 const swup = new Swup({
   containers: ['#swup'],
   animationSelector: '[class*="transition-"]',
+  animationDuration: 1400, // matches longest transition (1.4s)
 });
 
-// Mark active nav link
+// ── Active nav link ─────────────────────────────
 function initActiveNav() {
   const links = document.querySelectorAll('.site-header nav a');
   const path = window.location.pathname.split('/').pop() || 'index.html';
 
   links.forEach((link) => {
     link.classList.remove('active');
-    const href = link.getAttribute('href').split('/').pop();
+    const href = (link.getAttribute('href') || '').split('/').pop();
     if (href === path || (path === '' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
 }
 
-// ─── Preloader ────────────────────────────────
+// ── Cinematic Preloader ─────────────────────────
 function initPreloader() {
   return new Promise((resolve) => {
-    const preloader = document.getElementById('preloader');
-    const fill = document.getElementById('preloader-fill');
+    const preloader  = document.getElementById('preloader');
+    const fill       = document.getElementById('preloader-fill');
+    const countEl    = document.getElementById('preloader-count');
 
-    if (!preloader || !fill || sessionStorage.getItem('horai_visited')) {
+    // Skip if not on home or already visited this session
+    if (!preloader || !fill || sessionStorage.getItem('hokage_visited')) {
       if (preloader) preloader.style.display = 'none';
       resolve();
       return;
     }
 
-    sessionStorage.setItem('horai_visited', 'true');
-    let progress = 0;
-    const target = 100;
+    sessionStorage.setItem('hokage_visited', 'true');
+
+    let progress   = 0;
+    const MIN_TIME = 2800; // minimum display time for full cinematic effect
+    const started  = performance.now();
+
     const tick = () => {
-      const remaining = target - progress;
-      progress += remaining * 0.08;
+      const elapsed  = performance.now() - started;
+      const timeRatio = Math.min(elapsed / MIN_TIME, 1);
+
+      // Exponential ease — fast start, slow crawl at end
+      const eased = 1 - Math.pow(1 - timeRatio, 3);
+      progress = eased * 100;
+
       fill.style.width = `${Math.min(progress, 100)}%`;
+      if (countEl) countEl.textContent = Math.floor(Math.min(progress, 100));
 
       if (progress < 99.5) {
         requestAnimationFrame(tick);
       } else {
         fill.style.width = '100%';
-        window.setTimeout(() => {
+        if (countEl) countEl.textContent = '100';
+
+        // Hold at 100 for a beat, then dissolve out
+        setTimeout(() => {
           preloader.classList.add('is-done');
-          window.setTimeout(() => {
+          setTimeout(() => {
             preloader.style.display = 'none';
             resolve();
-          }, 600);
-        }, 200);
+          }, 1200); // match preloader-exit animation
+        }, 400);
       }
     };
 
+    // Wait for fonts + critical hero assets
     const fontReady = document.fonts ? document.fonts.ready : Promise.resolve();
-    const imgReady = new Promise((imgRes) => {
-      const heroImgs = document.querySelectorAll('img[fetchpriority="high"], .hero-video');
-      if (!heroImgs.length) { imgRes(); return; }
+    const imgReady  = new Promise((res) => {
+      const heroMedia = document.querySelectorAll('img[fetchpriority="high"], video.hero-video');
+      if (!heroMedia.length) { res(); return; }
 
       let loaded = 0;
-      const total = heroImgs.length;
-      const check = () => { loaded++; if (loaded >= total) imgRes(); };
-
-      heroImgs.forEach((el) => {
+      const check = () => { if (++loaded >= heroMedia.length) res(); };
+      heroMedia.forEach((el) => {
         if (el.complete || el.readyState >= 3) { check(); return; }
-        el.addEventListener('load', check, { once: true });
+        el.addEventListener('load',    check, { once: true });
         el.addEventListener('canplay', check, { once: true });
-        el.addEventListener('error', check, { once: true });
+        el.addEventListener('error',   check, { once: true });
       });
-
-      window.setTimeout(imgRes, 2500);
+      // Safety timeout — never block more than 3s
+      setTimeout(res, 3000);
     });
 
     Promise.all([fontReady, imgReady]).then(() => {
@@ -92,16 +106,14 @@ function initPreloader() {
   });
 }
 
-// ─── Page Scripts Orchestration ───────────────
+// ── Page Scripts Orchestration ──────────────────
 function runPageScripts() {
-  // Kill all GSAP ScrollTriggers to prevent duplicates on navigation
+  // Destroy old GSAP contexts to prevent duplicate triggers
   if (typeof ScrollTrigger !== 'undefined') {
     ScrollTrigger.killAll();
   }
 
   initActiveNav();
-
-  // Scroll to top on page change
   window.scrollTo(0, 0);
 
   const path = window.location.pathname.split('/').pop() || 'index.html';
@@ -121,17 +133,15 @@ function runPageScripts() {
   }
 }
 
-// ─── Initialize on DOM ready ──────────────────
+// ── Boot ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scroll
   initLenis();
 
-  // Wait for preloader to finish, then run scripts for the first time
   initPreloader().then(() => {
     runPageScripts();
   });
 
-  // Re-run scripts every time Swup replaces the page content
+  // Re-initialize page scripts after each Swup navigation
   swup.hooks.on('content:replace', () => {
     runPageScripts();
   });
