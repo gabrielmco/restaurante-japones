@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════
-// HOKAGE · Main Entry Point
+// KENSHŌ · Main Entry Point
 // ═══════════════════════════════════════════════
 
 import { initLenis } from './lenis.js';
@@ -41,17 +41,18 @@ function initPreloader() {
     const fill       = document.getElementById('preloader-fill');
     const countEl    = document.getElementById('preloader-count');
 
-    // Skip if not on home or already visited this session
-    if (!preloader || !fill || sessionStorage.getItem('hokage_visited')) {
+    // Force show for debugging/verification
+    // if (!preloader || !fill || sessionStorage.getItem(visitedKey)) {
+    if (!preloader || !fill) {
       if (preloader) preloader.style.display = 'none';
       resolve();
       return;
     }
 
-    sessionStorage.setItem('hokage_visited', 'true');
+    // sessionStorage.setItem(visitedKey, 'true');
 
     let progress   = 0;
-    const MIN_TIME = 2800; // minimum display time for full cinematic effect
+    const MIN_TIME = 3200; // slightly longer for more "prestige"
     const started  = performance.now();
 
     const tick = () => {
@@ -146,3 +147,4 @@ document.addEventListener('DOMContentLoaded', () => {
     runPageScripts();
   });
 });
+

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hōrai | Maestria da culinária asiática</title>
-  <meta name="description" content="Hōrai — culinária asiática autoral com precisão, atmosfera e ritual. Uma experiência onde tradição e gesto contemporâneo se encontram." />
-  <meta name="author" content="Restaurante Hōrai" />
-  <meta property="og:title" content="Hōrai | Maestria da culinária asiática" />
-  <meta property="og:description" content="Culinária asiática autoral, servida com precisão, ritual e atmosfera." />
+  <title>Kenshō | Maestria da culinária japonesa</title>
+  <meta name="description" content="Kenshō — culinária japonesa autoral com precisão, atmosfera e ritual. Uma experiência onde tradição e gesto contemporâneo se encontram." />
+  <meta name="author" content="Restaurante Kenshō" />
+  <meta property="og:title" content="Kenshō | Maestria da culinária japonesa" />
+  <meta property="og:description" content="Culinária japonesa autoral, servida com precisão, ritual e atmosfera." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -16,6 +16,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Pinyon+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/main.css" />
+  <style>
+    /* Immediate preloader block */
+    #preloader { 
+      position: fixed; 
+      inset: 0; 
+      z-index: 99999; 
+      background: #080808; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+    }
+    body { overflow: hidden; }
+    .preloader.is-done { opacity: 0; visibility: hidden; transition: opacity 1.2s, visibility 1.2s; }
+  </style>
   <script type="module" src="./js/main.js"></script>
 </head>
 <body data-page="home">
@@ -28,12 +42,12 @@
 
     <!-- Brand word letterform reveal -->
     <div class="preloader__brand">
-      <span class="preloader__letter" style="--i:0">H</span>
-      <span class="preloader__letter" style="--i:1">O</span>
-      <span class="preloader__letter" style="--i:2">K</span>
-      <span class="preloader__letter" style="--i:3">A</span>
-      <span class="preloader__letter" style="--i:4">G</span>
-      <span class="preloader__letter" style="--i:5">E</span>
+      <span class="preloader__letter" style="--i:0">K</span>
+      <span class="preloader__letter" style="--i:1">E</span>
+      <span class="preloader__letter" style="--i:2">N</span>
+      <span class="preloader__letter" style="--i:3">S</span>
+      <span class="preloader__letter" style="--i:4">H</span>
+      <span class="preloader__letter" style="--i:5">Ō</span>
     </div>
 
     <!-- Descriptor line -->
@@ -53,7 +67,7 @@
 
   <header class="site-header" id="header">
     <div class="header-inner">
-      <a class="logo" href="index.html" aria-label="Página inicial do Hōrai">H.</a>
+      <a class="logo" href="index.html" aria-label="Página inicial do Kenshō">K.</a>
       <nav aria-label="Navegação principal">
         <ul>
           <li><a href="menu.html">Menu</a></li>

@@ -314,12 +314,12 @@ function initAboutTestimonialCarousel() {
 
   const slides = [
     {
-      text: '“Jantar no Hōrai foi como entrar em uma história cuidadosamente composta. Do primeiro prato ao último, cada detalhe parecia pensado e refinado.”',
+      text: '“Jantar no Kenshō foi como entrar em uma história cuidadosamente composta. Do primeiro prato ao último, cada detalhe parecia pensado e refinado.”',
       name: 'Aanya R.',
       role: 'Avaliação de cliente',
     },
     {
-      text: '“O Hōrai tem uma elegância rara. Os sabores eram intensos, mas perfeitamente equilibrados, e o serviço pareceu intuitivo em vez de performático.”',
+      text: '“O Kenshō tem uma elegância rara. Os sabores eram intensos, mas perfeitamente equilibrados, e o serviço pareceu intuitivo em vez de performático.”',
       name: 'Sofia M.',
       role: 'Avaliação de cliente',
     },
