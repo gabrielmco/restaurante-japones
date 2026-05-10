@@ -1,5 +1,5 @@
 // ==============================================
-// HŌRAI · Infinite Marquee (replaces Framer Motion translate loop)
+// KENSHŌ · Infinite Marquee (replaces Framer Motion translate loop)
 // ==============================================
 
 export function initMarquee() {

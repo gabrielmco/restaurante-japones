@@ -1,5 +1,5 @@
 // ==============================================
-// HŌRAI · Lenis Smooth Scroll Setup
+// KENSHŌ · Lenis Smooth Scroll Setup
 // ==============================================
 
 import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.1.20/+esm';

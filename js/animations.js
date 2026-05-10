@@ -1,5 +1,5 @@
 // ==============================================
-// HŌRAI · GSAP Animations (replaces Framer Motion)
+// KENSHŌ · GSAP Animations (replaces Framer Motion)
 // ==============================================
 
 import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/+esm';
