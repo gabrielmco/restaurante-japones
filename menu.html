@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hōrai | Menu</title>
+  <meta name="description" content="Conheça o menu do Hōrai — sushi, sashimi, ramen, bebidas e sobremesas autorais." />
+  <meta name="author" content="Restaurante Hōrai" />
+  <meta property="og:title" content="Menu | Hōrai" />
+  <meta property="og:description" content="Sushi, sashimi, ramen, bebidas e sobremesas autorais preparados com precisão." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Pinyon+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body data-page="menu">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Página inicial do Hōrai">H.</a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="swup" class="transition-fade">
+    <section class="menu-hero">
+      <div class="menu-hero__bg">
+        <img src="./images/menu-hero-bg.webp" alt="Mesa de sushi com peças variadas" />
+        <div class="menu-hero__bg-overlay"></div>
+      </div>
+
+      <div class="menu-hero__noise"></div>
+
+      <div class="menu-hero__title-wrap js-menu-title">
+        <div class="menu-hero__eyebrow">
+          <span class="menu-hero__line"></span>
+          <span>Menu autoral</span>
+          <span class="menu-hero__line"></span>
+        </div>
+        <h1 class="menu-hero__heading">Sabores<br>de precisão</h1>
+      </div>
+
+      <div class="menu-hero__cards">
+        <div class="menu-hero__card menu-hero__card--tl js-hero-card">
+          <div class="menu-hero__card-img">
+            <img src="./images/menu-card-crudo.webp" alt="Crudo sazonal" />
+          </div>
+          <span>Crudo sazonal</span>
+        </div>
+        <div class="menu-hero__card menu-hero__card--tr js-hero-card">
+          <div class="menu-hero__card-img">
+            <img src="./images/menu-card-duck.webp" alt="Peito de pato defumado" />
+          </div>
+          <span>Peito de pato defumado</span>
+        </div>
+        <div class="menu-hero__card menu-hero__card--bl js-hero-card">
+          <div class="menu-hero__card-img">
+            <img src="./images/menu-card-tartar.webp" alt="Tartar de atum" />
+          </div>
+          <span>Tartar de atum</span>
+        </div>
+        <div class="menu-hero__card menu-hero__card--br js-hero-card">
+          <div class="menu-hero__card-img">
+            <img src="./images/menu-card-garden.webp" alt="Colheita do jardim" />
+          </div>
+          <span>Colheita do jardim</span>
+        </div>
+      </div>
+
+      <div class="menu-hero__scroll-cue">
+        <span>Role</span>
+        <div class="menu-hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <div class="menu-section__fade menu-section__fade--top"></div>
+      <div class="menu-section__container">
+        <aside class="menu-sidebar">
+          <h3 class="menu-sidebar__label">Menu</h3>
+          <nav class="menu-sidebar__nav" aria-label="Categorias do menu">
+            <button class="menu-sidebar__btn is-active" data-target="sushi">Sushi</button>
+            <button class="menu-sidebar__btn" data-target="sashimi">Sashimi</button>
+            <button class="menu-sidebar__btn" data-target="ramen">Ramen</button>
+            <button class="menu-sidebar__btn" data-target="drinks">Bebidas</button>
+            <button class="menu-sidebar__btn" data-target="desserts">Sobremesas</button>
+          </nav>
+        </aside>
+
+        <div class="menu-content">
+          <div id="menu-cat-sushi" class="menu-category js-menu-cat" data-cat="sushi">
+            <div class="menu-category__header">
+              <h2>Sushi</h2>
+              <div class="menu-category__divider"></div>
+            </div>
+            <div class="menu-category__list">
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-sushi-salmon.webp" alt="Barriga de salmão maçaricada" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Barriga de salmão maçaricada</h4><span class="menu-item__price">$18</span></div>
+                  <p>Ponzu, cebolinha, gergelim tostado e raspas de limão.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-card-crudo.webp" alt="Atum bluefin picante" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Atum bluefin picante</h4><span class="menu-item__price">$22</span></div>
+                  <p>Pepino, maionese picante, togarashi e ervas frescas.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-sushi-wagyu.webp" alt="Rolo de Wagyu" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Rolo de Wagyu</h4><span class="menu-item__price">$32</span></div>
+                  <p>Wagyu A5, trufas, aspargos grelhados e folha de ouro.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-sushi-salmon.webp" alt="California de caranguejo-real" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>California de caranguejo-real</h4><span class="menu-item__price">$26</span></div>
+                  <p>Caranguejo-real, avocado cremoso, pepino e tobiko.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="menu-cat-sashimi" class="menu-category js-menu-cat" data-cat="sashimi">
+            <div class="menu-category__header">
+              <h2>Sashimi</h2>
+              <div class="menu-category__divider"></div>
+            </div>
+            <div class="menu-category__list">
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-sashimi-hamachi.webp" alt="Carpaccio de hamachi" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Carpaccio de hamachi</h4><span class="menu-item__price">$24</span></div>
+                  <p>Yellowtail, jalapeño, shoyu com yuzu e coentro.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-sashimi-hamachi.webp" alt="Tiradito de vieira" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Tiradito de vieira</h4><span class="menu-item__price">$21</span></div>
+                  <p>Vieira de Hokkaido, pimenta rocoto, limão e azeite.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-card-crudo.webp" alt="Seleção do chef" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Seleção do chef</h4><span class="menu-item__price">$45</span></div>
+                  <p>12 peças de peixes premium escolhidos conforme a estação.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="menu-cat-ramen" class="menu-category js-menu-cat" data-cat="ramen">
+            <div class="menu-category__header">
+              <h2>Ramen</h2>
+              <div class="menu-category__divider"></div>
+            </div>
+            <div class="menu-category__list">
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-ramen-shoyu.webp" alt="Shoyu com trufas" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Shoyu com trufas</h4><span class="menu-item__price">$24</span></div>
+                  <p>Caldo de frango, pasta de trufas, chashu e ajitama.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-ramen-shoyu.webp" alt="Missô picante" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Missô picante</h4><span class="menu-item__price">$22</span></div>
+                  <p>Caldo suíno intenso, pasta de missô picante, milho e manteiga.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-ramen-vegan.webp" alt="Cogumelos vegano" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Cogumelos vegano</h4><span class="menu-item__price">$20</span></div>
+                  <p>Caldo cremoso de cogumelos, tofu, couve e óleo de alho.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="menu-cat-drinks" class="menu-category js-menu-cat" data-cat="drinks">
+            <div class="menu-category__header">
+              <h2>Bebidas</h2>
+              <div class="menu-category__divider"></div>
+            </div>
+            <div class="menu-category__list">
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-drink-highball.webp" alt="Highball de yuzu" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Highball de yuzu</h4><span class="menu-item__price">$16</span></div>
+                  <p>Whisky japonês, yuzu fresco, soda e hortelã.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-drink-martini.webp" alt="Martini de sakura" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Martini de sakura</h4><span class="menu-item__price">$18</span></div>
+                  <p>Gin, saquê, xarope de cerejeira e limão.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-drink-matcha.webp" alt="Latte de matcha" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Latte de matcha</h4><span class="menu-item__price">$9</span></div>
+                  <p>Matcha cerimonial, leite de aveia e baunilha.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="menu-cat-desserts" class="menu-category js-menu-cat" data-cat="desserts">
+            <div class="menu-category__header">
+              <h2>Sobremesas</h2>
+              <div class="menu-category__divider"></div>
+            </div>
+            <div class="menu-category__list">
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-dessert-sesame.webp" alt="Mousse de gergelim preto" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Mousse de gergelim preto</h4><span class="menu-item__price">$14</span></div>
+                  <p>Crumble de kinako, tuile de gergelim e ouro.</p>
+                </div>
+              </div>
+              <div class="menu-item js-menu-item">
+                <div class="menu-item__img"><img src="./images/menu-dessert-matcha.webp" alt="Tiramisù de matcha" /></div>
+                <div class="menu-item__body">
+                  <div class="menu-item__top"><h4>Tiramisù de matcha</h4><span class="menu-item__price">$15</span></div>
+                  <p>Mascarpone, pão de ló de matcha e calda de saquê.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:8rem;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservations" class="reservation-section">
+      <div class="reservation-section__fade reservation-section__fade--top"></div>
+      <div class="reservation-section__container">
+        <h2 class="reservation-section__title js-reveal">Reserve sua mesa</h2>
+        <form class="reservation-form js-reveal-up">
+          <div class="reservation-form__grid">
+            <input type="text" placeholder="Nome" />
+            <input type="tel" placeholder="Telefone" />
+          </div>
+          <div class="reservation-form__grid">
+            <input type="email" placeholder="E-mail" />
+            <input type="text" placeholder="Data (dd/mm/aaaa)" />
+          </div>
+          <div class="reservation-form__grid">
+            <div class="reservation-form__select-wrap">
+              <select>
+                <option value="" disabled selected>Horário</option>
+                <option>18:00</option><option>18:30</option><option>19:00</option>
+                <option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+              </select>
+            </div>
+            <div class="reservation-form__select-wrap">
+              <select>
+                <option value="" disabled selected>Lugares</option>
+                <option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option>
+                <option>5 pessoas</option><option>6 pessoas</option><option>7 pessoas</option><option>8 pessoas</option>
+              </select>
+            </div>
+          </div>
+          <textarea placeholder="Mensagem (pedidos especiais, alergias...)"></textarea>
+          <div class="reservation-form__submit">
+            <button type="submit">Reservar mesa</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-ghost">
+      <span>hōrai</span>
+    </div>
+    <div class="footer-content">
+      <nav aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Hōrai</p>
+    </div>
+  </footer>
+
+</body>
+</html>

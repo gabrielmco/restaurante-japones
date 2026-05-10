@@ -1,0 +1,42 @@
+﻿.form-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #FDFBF7;
+  background: rgba(253, 251, 247, 0.05);
+  border: 1px solid rgba(253, 251, 247, 0.2);
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form-input::-moz-placeholder {
+  color: rgba(253, 251, 247, 0.3);
+}
+.form-input::placeholder {
+  color: rgba(253, 251, 247, 0.3);
+}
+.form-input:focus {
+  outline: none;
+  border-color: rgba(253, 251, 247, 0.4);
+  background: rgba(253, 251, 247, 0.1);
+}
+.form-input.select-el {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(253,251,247,0.4)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea,
+.reservation-form .form-input {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+

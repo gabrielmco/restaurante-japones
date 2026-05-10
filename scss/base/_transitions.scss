@@ -1,0 +1,76 @@
+// ==============================================
+// Page Transitions — Swup.js Exponential Slide
+// ==============================================
+
+body {
+  background: #050505;
+}
+
+/* Darkness Overlay during transitions */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: #000000;
+  opacity: 0;
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1); /* Expo-Out entering */
+  will-change: opacity;
+}
+
+html.is-animating.is-leaving body::after {
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.87, 0, 0.13, 1); /* Expo-In exiting */
+}
+
+html.is-animating body::after {
+  opacity: 1;
+  transition: none;
+}
+
+/* Swup Transition Container */
+.transition-fade {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+  transition: 
+    opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), 
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+/* Entering State (from left to center) */
+html.is-animating .transition-fade {
+  opacity: 0.001;
+  transform: translateX(-10vw);
+  filter: blur(8px);
+}
+
+/* Exiting State (from center to right) */
+html.is-animating.is-leaving .transition-fade {
+  opacity: 0.001;
+  transform: translateX(10vw);
+  filter: blur(6px);
+  transition: 
+    opacity 0.8s cubic-bezier(0.87, 0, 0.13, 1), 
+    transform 0.8s cubic-bezier(0.87, 0, 0.13, 1),
+    filter 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader {
+    display: none !important;
+  }
+  
+  body::after {
+    display: none !important;
+  }
+
+  .transition-fade {
+    transform: none !important;
+    filter: none !important;
+    transition: opacity 160ms ease !important;
+  }
+}

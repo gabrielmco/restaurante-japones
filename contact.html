@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | Hōrai</title>
+  <meta name="description" content="Fale com o Hōrai, encontre nossas unidades e reserve uma experiência de gastronomia asiática autoral." />
+  <meta name="author" content="Restaurante Hōrai" />
+  <meta property="og:title" content="Contato | Hōrai" />
+  <meta property="og:description" content="Contato para reservas, mensagens e experiências privadas no Hōrai." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Pinyon+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/main.css" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body data-page="contact">
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Página inicial do Hōrai">H.</a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="swup" class="transition-fade contact-page-v2">
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="contact-hero__media">
+        <img
+          src="./images/menu-dessert-sesame.webp"
+          alt="Sobremesa delicada servida em mesa de restaurante"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="contact-hero__shade"></div>
+      <div class="contact-hero__grain" aria-hidden="true"></div>
+
+      <div class="contact-hero__content reveal">
+        <span>Contato direto</span>
+        <div class="contact-hero__title-row">
+          <i aria-hidden="true"></i>
+          <h1 id="contact-hero-title">Fale com<br />Hōrai</h1>
+          <i aria-hidden="true"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section" aria-labelledby="contact-form-title">
+      <div class="contact-form-section__inner">
+        <div class="contact-form-section__header reveal">
+          <h2 id="contact-form-title">Envie sua mensagem</h2>
+        </div>
+
+        <form class="contact-form reveal" id="contact-message-form" novalidate>
+          <input class="contact-input" type="text" placeholder="Nome" autocomplete="name" />
+          <input class="contact-input" type="email" placeholder="E-mail" autocomplete="email" />
+          <input class="contact-input" type="tel" placeholder="Telefone" autocomplete="tel" />
+          <textarea class="contact-input" placeholder="Mensagem" rows="6"></textarea>
+          <button class="contact-submit" type="submit">Enviar</button>
+        </form>
+
+        <div class="contact-info">
+          <article class="contact-block">
+            <span>Atendimento</span>
+            <a href="mailto:hello@horai.co">hello@horai.co</a>
+          </article>
+          <article class="contact-block">
+            <span>Reservas</span>
+            <a href="mailto:book@horai.co">book@horai.co</a>
+          </article>
+          <article class="contact-block">
+            <span>Telefone</span>
+            <a href="tel:+1234567890">+12 345 678 90</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="locations-section" aria-labelledby="locations-title">
+      <div class="locations-section__hero">
+        <img
+          src="./images/about-culture-table.webp"
+          alt="Interior acolhedor de restaurante com mesas preparadas"
+          loading="lazy"
+        />
+        <div class="locations-section__shade"></div>
+        <h2 id="locations-title" class="reveal-title">Unidades</h2>
+      </div>
+
+      <div class="locations-section__grid reveal-stagger">
+        <article>
+          <h3>Tóquio</h3>
+          <p>Ginza 4-Chome, Chuo City</p>
+        </article>
+        <article>
+          <h3>Dubai</h3>
+          <p>Downtown Blvd, Opera District</p>
+        </article>
+        <article>
+          <h3>Paris</h3>
+          <p>12 Rue de la Paix, 1st Arr.</p>
+        </article>
+        <article>
+          <h3>Roma</h3>
+          <p>Via del Corso, 18, Centro</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="reservations-section contact-reservations" id="reservations">
+      <div class="gradient-top"></div>
+      <div class="gradient-bottom"></div>
+
+      <div class="reservations-content">
+        <div class="reservation-heading">
+          <h2 class="text-section-title reveal-title">Reserve sua mesa</h2>
+        </div>
+
+        <form class="reservation-form" id="reservation-form" novalidate>
+          <div class="form-grid-2">
+            <input class="form-input" type="text" placeholder="Nome" id="res-name" autocomplete="name" />
+            <input class="form-input" type="tel" placeholder="Telefone" id="res-phone" autocomplete="tel" />
+          </div>
+          <div class="form-grid-2">
+            <input class="form-input" type="email" placeholder="E-mail" id="res-email" autocomplete="email" />
+            <input class="form-input" type="text" placeholder="Data (dd/mm/aaaa)" id="res-date" />
+          </div>
+          <div class="form-grid-2">
+            <select class="form-input select-el" id="res-time">
+              <option value="" disabled selected>Horário</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+            </select>
+            <select class="form-input select-el" id="res-seats">
+              <option value="" disabled selected>Lugares</option>
+              <option value="2">2 pessoas</option>
+              <option value="3">3 pessoas</option>
+              <option value="4">4 pessoas</option>
+              <option value="5">5 pessoas</option>
+              <option value="6">6 pessoas</option>
+              <option value="7">7 pessoas</option>
+              <option value="8">8 pessoas</option>
+            </select>
+          </div>
+          <textarea class="form-input" placeholder="Mensagem (pedidos especiais, alergias...)" id="res-message" rows="4"></textarea>
+          <div class="form-submit">
+            <button type="submit" class="btn-outline" id="book-table-btn">
+              <span>Reservar mesa</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-ghost">
+      <span>hōrai</span>
+    </div>
+    <div class="footer-content">
+      <nav aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Hōrai</p>
+    </div>
+  </footer>
+
+</body>
+</html>

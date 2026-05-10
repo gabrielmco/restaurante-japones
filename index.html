@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hōrai | Maestria da culinária asiática</title>
+  <meta name="description" content="Hōrai — culinária asiática autoral com precisão, atmosfera e ritual. Uma experiência onde tradição e gesto contemporâneo se encontram." />
+  <meta name="author" content="Restaurante Hōrai" />
+  <meta property="og:title" content="Hōrai | Maestria da culinária asiática" />
+  <meta property="og:description" content="Culinária asiática autoral, servida com precisão, ritual e atmosfera." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Pinyon+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/main.css" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body data-page="home">
+
+  <div class="preloader" id="preloader">
+    <div class="preloader__bar">
+      <div class="preloader__fill" id="preloader-fill"></div>
+    </div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Página inicial do Hōrai">H.</a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="swup" class="transition-fade">
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="./images/sushi-chef-poster.webp"
+          aria-label="Chef de sushi finalizando um prato no balcão"
+        >
+          <source src="./images/sushi-chef.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay-dark"></div>
+        <div class="hero-overlay-grad"></div>
+        <div class="noise-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">hōrai</h1>
+        <div class="hero-tagline-group">
+          <div class="hero-divider"></div>
+          <p class="hero-tagline">Culinária asiática autoral, precisa e memorável</p>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title reveal-title">Uma experiência singular</h2>
+          <div class="section-divider reveal"></div>
+          <p class="section-body reveal">
+            Descubra camadas de sabor onde tradições antigas encontram gesto contemporâneo. Cada prato é pensado para ser vivido com calma, não apenas servido à mesa.
+          </p>
+        </div>
+      </div>
+
+      <div class="marquee-container gradient-sides">
+        <div class="marquee-track" id="marquee-1">
+          <div class="marquee-inner">
+            <div class="marquee-card img-card">
+              <img src="./images/marquee-1.webp" alt="Sashimi premium" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/marquee-3.webp" alt="Sobremesa de matcha" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/marquee-4.webp" alt="Cocktail asiático" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/marquee-5.webp" alt="Gyoza artesanal" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/sushi-chopsticks.webp" alt="Sushi entre hashis sobre fundo escuro" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee-track" id="marquee-2">
+          <div class="marquee-inner">
+            <div class="marquee-card img-card">
+              <img src="./images/marquee-6.webp" alt="Tempura crocante" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/marquee-7.webp" alt="Wagyu tataki" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/hero-bg.webp" alt="Sashimi em pedra escura" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/sushi-chopsticks.webp" alt="Sushi entre hashis sobre fundo escuro" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+            <div class="marquee-card img-card">
+              <img src="./images/flavors-bg.webp" alt="Prato autoral com acabamento refinado" loading="lazy" />
+              <div class="card-border"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-cta">
+          <a href="menu.html">
+            <button class="btn-ghost" id="explore-menu-btn">
+              <span>Explorar menu</span>
+            </button>
+          </a>
+        </div>
+
+        <div class="gradient-bottom" style="z-index:20;"></div>
+      </div>
+    </section>
+
+    <section class="flavors-section" id="flavors">
+      <div class="flavors-bg">
+        <img
+          src="./images/flavors-bg.webp"
+          alt="Sabores excepcionais"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flavors-content">
+        <h2 class="text-section-title reveal-title">Sabores excepcionais</h2>
+        <div class="divider-line reveal" style="margin:0 auto;"></div>
+        <p class="text-body reveal" style="max-width:34rem; margin-top:1rem;">
+          Entre em uma jornada marcada por precisão, intenção e ingredientes escolhidos para revelar textura, aroma e equilíbrio.
+        </p>
+        <a href="about.html" style="margin-top:1rem;">
+          <button class="btn-outline" id="learn-more-btn">
+            <span>Saiba mais</span>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section class="sushi-section" id="sushi">
+      <div class="gradient-top"></div>
+
+      <div class="sushi-content reveal">
+        <h2 class="text-section-title reveal-title">Sushi à perfeição</h2>
+        <div class="divider-line reveal" style="margin:1.5rem auto; box-shadow:0 0 10px rgba(253,251,247,0.3);"></div>
+        <p class="text-body">
+          Um equilíbrio delicado entre textura e sabor. Nosso sushi é preparado com precisão, respeitando a tradição e acolhendo o gesto ousado da criação contemporânea.
+        </p>
+      </div>
+
+      <div class="sushi-image-wrap">
+        <img
+          src="./images/sushi.webp"
+          alt="Chef preparando sushi em balcão de madeira"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <section class="reservations-section" id="reservations">
+      <div class="gradient-top"></div>
+      <div class="gradient-bottom"></div>
+
+      <div class="reservations-content">
+        <div style="max-width:40rem; margin-bottom:3rem; text-align:center;">
+          <h2 class="text-section-title reveal-title">Reserve sua mesa</h2>
+        </div>
+
+        <form class="reservation-form" id="reservation-form" novalidate>
+          <div class="form-grid-2">
+            <input class="form-input" type="text" placeholder="Nome" id="res-name" autocomplete="name" />
+            <input class="form-input" type="tel" placeholder="Telefone" id="res-phone" autocomplete="tel" />
+          </div>
+          <div class="form-grid-2">
+            <input class="form-input" type="email" placeholder="E-mail" id="res-email" autocomplete="email" />
+            <input class="form-input" type="text" placeholder="Data (dd/mm/aaaa)" id="res-date" />
+          </div>
+          <div class="form-grid-2">
+            <select class="form-input select-el" id="res-time">
+              <option value="" disabled selected>Horário</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+            </select>
+            <select class="form-input select-el" id="res-seats">
+              <option value="" disabled selected>Lugares</option>
+              <option value="2">2 pessoas</option>
+              <option value="3">3 pessoas</option>
+              <option value="4">4 pessoas</option>
+              <option value="5">5 pessoas</option>
+              <option value="6">6 pessoas</option>
+              <option value="7">7 pessoas</option>
+              <option value="8">8 pessoas</option>
+            </select>
+          </div>
+          <textarea class="form-input" placeholder="Mensagem (pedidos especiais, alergias...)" id="res-message" rows="4"></textarea>
+          <div class="form-submit">
+            <button type="submit" class="btn-outline" id="book-table-btn">
+              <span>Reservar mesa</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-ghost">
+      <span>hōrai</span>
+    </div>
+    <div class="footer-content">
+      <nav aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Hōrai</p>
+    </div>
+  </footer>
+
+</body>
+</html>

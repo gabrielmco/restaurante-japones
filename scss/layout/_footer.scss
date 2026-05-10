@@ -1,0 +1,71 @@
+﻿.site-footer {
+  position: relative;
+  width: 100%;
+  background: #0A0A0A;
+  overflow: hidden;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 50vh;
+}
+.site-footer .footer-ghost {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.site-footer .footer-ghost span {
+  font-family: "Pinyon Script", cursive;
+  font-size: 35vw;
+  color: #FDFBF7;
+  opacity: 0.03;
+  line-height: 1;
+  transform: translateY(-10%);
+  filter: blur(6px);
+  white-space: nowrap;
+}
+.site-footer .footer-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.site-footer .footer-content nav ul {
+  display: flex;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-content nav ul {
+    gap: 2rem;
+  }
+}
+.site-footer .footer-content nav ul a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(253, 251, 247, 0.6);
+  transition: color 0.2s ease;
+}
+.site-footer .footer-content nav ul a:hover {
+  color: #FDFBF7;
+}
+.site-footer .footer-content .copyright {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(253, 251, 247, 0.3);
+}

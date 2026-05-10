@@ -1,0 +1,71 @@
+﻿img, video {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-script {
+  font-family: "Pinyon Script", cursive;
+}
+
+.font-sans {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-hero, .hero .hero-title {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(4rem, 12vw, 11rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #FDFBF7;
+  opacity: 0.9;
+
+
+}
+.text-section-title, .section-header .section-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #FDFBF7;
+  font-size: clamp(1.75rem, 5vw, 4.5rem);
+}
+
+.text-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: rgba(253, 251, 247, 0.8);
+}
+
+.text-body, .section-header .section-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+  color: rgba(253, 251, 247, 0.7);
+}
+

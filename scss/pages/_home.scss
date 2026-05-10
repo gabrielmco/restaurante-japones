@@ -1,0 +1,344 @@
+﻿.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #0A0A0A;
+}
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(ellipse 80% 70% at 50% 60%, #1a0d00 0%, #0A0A0A 70%);
+}
+.hero .hero-bg img, .hero .hero-bg video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 0.86;
+  filter: saturate(0.78) contrast(1.08) brightness(0.62);
+}
+@media (min-width: 900px) {
+  .hero .hero-bg img {
+    width: 118vw;
+    left: -11vw;
+  }
+}
+@media (max-width: 768px) {
+  .hero .hero-bg img {
+    width: 145vw;
+    left: -31vw;
+    object-position: center;
+  }
+  .hero .hero-bg video {
+    object-position: 58% center;
+  }
+}
+.hero .hero-bg .hero-overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero .hero-bg .hero-overlay-grad {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 28% 60%, rgba(10, 10, 10, 0.08), rgba(10, 10, 10, 0.5) 42%, rgba(10, 10, 10, 0.86) 100%),
+    linear-gradient(to top, rgba(10, 10, 10, 0.9) 0%, transparent 42%, rgba(10, 10, 10, 0.34) 100%);
+  z-index: 1;
+}
+.hero .hero-bg .noise-overlay {
+  z-index: 2;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100dvh;
+  padding: 1rem;
+  text-align: center;
+}
+.hero .hero-title {
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  mix-blend-mode: overlay;
+}
+@media (min-width: 768px) {
+  .hero .hero-title {
+    mix-blend-mode: normal;
+  }
+}
+.hero .hero-tagline-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .hero .hero-tagline-group {
+    margin-top: 1rem;
+  }
+}
+.hero .hero-divider {
+  opacity: 0.4;
+  margin-bottom: 0.5rem;
+}
+.hero .hero-tagline {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: rgba(245, 241, 232, 0.9);
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .hero .hero-tagline {
+    font-size: 0.875rem;
+  }
+}
+.hero .hero-scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.hero .hero-scroll-indicator .scroll-line {
+  width: 1px;
+  height: 4rem;
+  background: linear-gradient(to bottom, transparent, rgba(253, 251, 247, 0.5), transparent);
+  margin: 0 auto;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0;
+    transform: scaleY(0.5) translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+.experience-section {
+  position: relative;
+  width: 100%;
+  padding: 6rem 0 8rem;
+  overflow: hidden;
+  background: #0A0A0A;
+}
+.experience-section .section-header {
+  padding: 0 1rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .experience-section .section-header {
+    margin-bottom: 4rem;
+  }
+}
+.experience-section .marquee-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 0;
+}
+
+.marquee-track {
+  overflow: hidden;
+  cursor: grab;
+}
+.marquee-track:active {
+  cursor: grabbing;
+}
+.marquee-track .marquee-inner {
+  display: flex;
+  gap: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.marquee-track .marquee-card {
+  width: 240px;
+  height: 300px;
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .marquee-track .marquee-card {
+    width: 280px;
+    height: 350px;
+  }
+}
+
+.experience-cta {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flavors-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A0A0A;
+  overflow: hidden;
+}
+.flavors-section .flavors-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.flavors-section .flavors-bg img {
+  position: absolute;
+  inset: -8% 0 auto;
+  width: 100%;
+  height: 116%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  will-change: transform;
+}
+.flavors-section .flavors-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.5);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+.flavors-section .flavors-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.9) 0%, transparent 50%), linear-gradient(to bottom, rgba(10, 10, 10, 0.8) 0%, transparent 30%);
+  z-index: 1;
+}
+.flavors-section .flavors-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sushi-section {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(5rem, 9vw, 8rem);
+  overflow: hidden;
+  background: #0A0A0A;
+}
+.sushi-section .gradient-top {
+  position: absolute;
+}
+.sushi-section .sushi-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  padding: 0 1rem clamp(3rem, 5vw, 5rem);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.sushi-section .sushi-image-wrap {
+  position: relative;
+  width: 100vw;
+  height: clamp(22rem, 58vw, 46rem);
+  left: 50%;
+  margin-left: -50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .sushi-section .sushi-image-wrap {
+    height: 24rem;
+  }
+}
+.sushi-section .sushi-image-wrap img {
+  position: absolute;
+  inset: -6% 0 auto;
+  width: 100%;
+  max-width: none;
+  height: 112%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 58%;
+     object-position: center 58%;
+  filter: saturate(0.86) contrast(1.04) brightness(0.78);
+  will-change: transform;
+}
+
+.reservations-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0A0A0A;
+  overflow: hidden;
+  padding: 6rem 1rem;
+}
+@media (min-width: 768px) {
+  .reservations-section {
+    padding: 8rem 2rem;
+  }
+}
+.reservations-section .gradient-top, .reservations-section .gradient-bottom {
+  position: absolute;
+}
+.reservations-section .reservations-content {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.reservations-section .form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .reservations-section .form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.reservations-section .reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+.reservations-section .form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
