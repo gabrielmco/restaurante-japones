@@ -1,4 +1,4 @@
-﻿.contact-page-v2 {
+.contact-page-v2 {
   min-height: 100vh;
   background: #0A0A0A;
   color: #FDFBF7;
@@ -321,7 +321,7 @@ textarea.contact-input {
   }
   .contact-info,
   .locations-section__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .contact-block {
     align-items: center;
