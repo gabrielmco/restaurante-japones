@@ -154,8 +154,23 @@
 .contact-form {
   .form-submit {
     margin-top: 1rem;
-    .contact-submit {
+    
+    .btn-outline.contact-submit {
       width: 100%;
+      background: transparent;
+      border: 1px solid rgba(253, 251, 247, 0.4);
+      
+      &::before {
+        background: #FDFBF7;
+      }
+      
+      &:hover {
+        border-color: #FDFBF7;
+        
+        span {
+          color: #0A0A0A;
+        }
+      }
     }
   }
 }
