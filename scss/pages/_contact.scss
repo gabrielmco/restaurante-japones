@@ -132,18 +132,29 @@
   gap: 1.5rem;
 }
 
-.contact-input,
-
-
 .contact-input {
+  width: 100%;
+  border: 1px solid rgba(253, 251, 247, 0.12);
+  border-radius: 2px;
+  background: rgba(253, 251, 247, 0.05);
+  color: #FDFBF7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.5;
+  transition: border-color 320ms ease, background-color 320ms ease, color 320ms ease, transform 320ms ease;
   min-height: 3.75rem;
   padding: 1.05rem 1.25rem;
+  
+  &::placeholder {
+    color: rgba(253, 251, 247, 0.34);
+  }
 }
-.contact-input::-moz-placeholder {
-  color: rgba(253, 251, 247, 0.34);
-}
-.contact-input::placeholder {
-  color: rgba(253, 251, 247, 0.34);
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 .contact-input:focus {
   border-color: rgba(253, 251, 247, 0.34);
