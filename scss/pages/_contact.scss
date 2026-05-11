@@ -151,7 +151,16 @@
   }
 }
 
-.form-submit {
+.contact-form {
+  .form-submit {
+    margin-top: 1rem;
+    .contact-submit {
+      width: 100%;
+    }
+  }
+}
+
+.reservations-section .form-submit {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
