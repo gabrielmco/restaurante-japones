@@ -9,7 +9,7 @@
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: #1a1a1a;
+  background: #0A0A0A;
 }
 .menu-hero__bg img {
   display: none;
@@ -569,9 +569,7 @@
   .menu-hero {
     min-height: 100dvh;
     overflow: hidden;
-    background:
-      radial-gradient(circle at 50% 44%, rgba(253, 251, 247, 0.035), transparent 22rem),
-      #0A0A0A;
+    background: #0A0A0A;
   }
 
   .menu-hero__bg,
