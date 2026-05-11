@@ -588,6 +588,4 @@ export function initAllAnimations() {
   initHeaderScroll();
   initScrollReveal();
   initParallax();
-  initFooterAnimation();
-  initFormAnimation();
 }
