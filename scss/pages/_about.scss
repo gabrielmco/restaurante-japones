@@ -1,4 +1,4 @@
-﻿.about-page {
+.about-page {
   background: radial-gradient(circle at 50% 20%, rgba(42, 24, 16, 0.18), transparent 34rem), #0A0A0A;
 }
 
@@ -258,7 +258,6 @@
   min-height: 0;
   overflow: hidden;
   border-radius: 0.18rem;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.38);
 }
 .about-culture__image::before {
   content: "";

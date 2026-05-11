@@ -177,23 +177,7 @@ export function initParallax() {
 
 // ─── Footer Ghost Text Scrub ──────────────────
 export function initFooterAnimation() {
-  const ghost = document.querySelector('.footer-ghost span');
-  if (!ghost) return;
-
-  gsap.fromTo(ghost,
-    { opacity: 0.01, y: 40 },
-    {
-      opacity: 0.04,
-      y: -10,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.site-footer',
-        start: 'top bottom',
-        end: 'bottom bottom',
-        scrub: 2,
-      },
-    }
-  );
+  // Brand ghost removed from HTML per user request
 }
 
 // ─── Reservation Form Stagger ─────────────────
@@ -524,7 +508,6 @@ export function initMenuAnimations() {
       y: 0,
       duration: 0.8,
       ease: 'power2.out',
-      clearProps: 'transform',
       scrollTrigger: {
         trigger: item,
         start: 'top 88%',
@@ -540,7 +523,6 @@ export function initMenuAnimations() {
       x: -30,
       duration: 1,
       ease: 'power2.out',
-      clearProps: 'transform',
       scrollTrigger: { trigger: hdr, start: 'top 85%', once: true },
     });
   });
